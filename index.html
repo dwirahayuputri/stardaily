@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Stardaily.id</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white" style="height: 64px;">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav" style="width: 5%;">
+        <li class="nav-item active">
+          <a class="nav-link text-uppercase nav-link-font" href="#">Kategori <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase nav-link-font px-4" href="#">Koleksi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase nav-link-font" href="#">Kolaborasi</a>
+        </li>
+      </ul>
+
+      <a class="navbar-brand mx-auto" href="#">
+        <svg width="220" height="23" viewBox="0 0 220 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.1 22.45C9.1 22.45 7.35 22.12 5.85 21.46C4.35 20.8 3.17 19.86 2.31 18.64C1.45 17.4 0.98 15.96 0.9 14.32H5.67C5.77 15.2 6.03 15.96 6.45 16.6C6.87 17.22 7.45 17.7 8.19 18.04C8.93 18.38 9.79 18.55 10.77 18.55C12.21 18.55 13.32 18.28 14.1 17.74C14.9 17.18 15.3 16.4 15.3 15.4C15.3 14.66 15.06 14.05 14.58 13.57C14.1 13.07 13.41 12.65 12.51 12.31C11.61 11.97 10.43 11.65 8.97 11.35H8.94C7.36 11.01 6.05 10.62 5.01 10.18C3.99 9.74 3.19 9.18 2.61 8.5C2.05 7.82 1.77 7 1.77 6.04C1.77 4.94 2.13 3.98 2.85 3.16C3.59 2.32 4.59 1.68 5.85 1.24C7.11 0.779999 8.54 0.549999 10.14 0.549999C12.1 0.549999 13.8 0.869999 15.24 1.51C16.7 2.15 17.84 3.06 18.66 4.24C19.48 5.42 19.94 6.83 20.04 8.47H15.06C14.94 7.23 14.46 6.26 13.62 5.56C12.78 4.86 11.67 4.51 10.29 4.51C9.43 4.51 8.68 4.64 8.04 4.9C7.4 5.14 6.91 5.5 6.57 5.98C6.23 6.44 6.06 7 6.06 7.66C6.06 8.4 6.31 9 6.81 9.46C7.31 9.92 8.08 10.33 9.12 10.69C10.18 11.05 11.7 11.45 13.68 11.89C13.76 11.91 13.83 11.93 13.89 11.95C13.97 11.95 14.05 11.96 14.13 11.98C14.17 12 14.21 12.01 14.25 12.01C14.29 12.01 14.33 12.02 14.37 12.04C15.53 12.32 16.51 12.65 17.31 13.03C18.11 13.39 18.74 13.88 19.2 14.5C19.66 15.12 19.89 15.9 19.89 16.84C19.89 17.94 19.52 18.92 18.78 19.78C18.06 20.62 17.03 21.28 15.69 21.76C14.35 22.22 12.82 22.45 11.1 22.45ZM29.4638 22V5.62H21.9038V0.999999H41.7938V5.62H34.2638V22H29.4638ZM41.2634 22L49.2134 0.999999H55.3934L63.3434 22H58.2734L56.0234 15.94H48.4934L46.2134 22H41.2634ZM48.7034 15.37H55.8134L52.2734 6.07L48.7034 15.37ZM66.8365 22V0.999999H74.9965C77.6365 0.999999 79.7165 1.54 81.2365 2.62C82.7565 3.68 83.5165 5.14 83.5165 7C83.5165 8.42 83.0965 9.62 82.2565 10.6C81.4165 11.56 80.2265 12.23 78.6865 12.61L85.2865 22H79.9465L73.6465 12.97C73.6065 12.99 73.5565 13 73.4965 13C73.4565 13 73.4165 13 73.3765 13H71.5465V22H66.8365ZM74.4565 12.4C75.7565 12.4 76.7865 12.07 77.5465 11.41C78.3265 10.75 78.7165 9.88 78.7165 8.8C78.7165 7.7 78.3265 6.82 77.5465 6.16C76.7865 5.5 75.7565 5.17 74.4565 5.17H71.5465V12.4H74.4565ZM88.8384 22V0.999999H95.8584C98.1784 0.999999 100.218 1.44 101.978 2.32C103.738 3.18 105.098 4.41 106.058 6.01C107.038 7.59 107.528 9.42 107.528 11.5C107.528 13.58 107.038 15.42 106.058 17.02C105.098 18.6 103.738 19.83 101.978 20.71C100.218 21.57 98.1784 22 95.8584 22H88.8384ZM95.8584 17.65C97.2584 17.65 98.4584 17.41 99.4584 16.93C100.458 16.43 101.218 15.72 101.738 14.8C102.278 13.86 102.548 12.76 102.548 11.5C102.548 10.24 102.278 9.15 101.738 8.23C101.218 7.29 100.458 6.58 99.4584 6.1C98.4584 5.6 97.2584 5.35 95.8584 5.35H93.6384V17.65H95.8584ZM108.705 22L116.655 0.999999H122.835L130.785 22H125.715L123.465 15.94H115.935L113.655 22H108.705ZM116.145 15.37H123.255L119.715 6.07L116.145 15.37ZM134.278 22V0.999999H139.078V22H134.278ZM144.971 22V0.999999H149.771V17.38H160.211V22H144.971ZM167.347 22V14.62L158.617 0.999999H164.227L169.897 10.15L175.477 0.999999H180.847L172.147 14.62V22H167.347ZM182.187 22.3C181.387 22.3 180.707 22.03 180.147 21.49C179.607 20.93 179.337 20.25 179.337 19.45C179.337 18.63 179.607 17.95 180.147 17.41C180.707 16.87 181.387 16.6 182.187 16.6C182.987 16.6 183.657 16.87 184.197 17.41C184.757 17.95 185.037 18.63 185.037 19.45C185.037 20.25 184.757 20.93 184.197 21.49C183.657 22.03 182.987 22.3 182.187 22.3ZM189.678 22V0.999999H194.478V22H189.678ZM200.372 22V0.999999H207.392C209.712 0.999999 211.752 1.44 213.512 2.32C215.272 3.18 216.632 4.41 217.592 6.01C218.572 7.59 219.062 9.42 219.062 11.5C219.062 13.58 218.572 15.42 217.592 17.02C216.632 18.6 215.272 19.83 213.512 20.71C211.752 21.57 209.712 22 207.392 22H200.372ZM207.392 17.65C208.792 17.65 209.992 17.41 210.992 16.93C211.992 16.43 212.752 15.72 213.272 14.8C213.812 13.86 214.082 12.76 214.082 11.5C214.082 10.24 213.812 9.15 213.272 8.23C212.752 7.29 211.992 6.58 210.992 6.1C209.992 5.6 208.792 5.35 207.392 5.35H205.172V17.65H207.392Z" fill="#DC497E" style="mix-blend-mode:darken"/>
+        </svg>          
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <span class="navbar-text" style="font-size: 32px;">
+        <i class="fa fa-user"></i>
+        <i class="fa fa-shopping-cart"></i>
+        <b>|</b>
+        <i class="fa fa-search"></i>
+      </span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="p-5 bg-image hero-section"></div>
+
+  <!-- Section Produk Populer -->
+  <div class="py-5 px-0 mx-0 produk-populer">
+    <div class="text-center mb-3">
+      <p class="text-uppercase font-weight-primary">produk populer</p>
+    </div>
+
+    <div class="row gy-2" style="overflow-x: hidden;">
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/1.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Donald duck case</p>
+            <p>59.000,00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/2.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Donald duck case</p>
+            <div class="d-flex justify-content-center">
+              <s class="mr-5">66.000,00</s>
+              <p class="text-harga">46.000,00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/3.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Spongebob W/ Bnatalan Case</p>
+            <div class="d-flex justify-content-center">
+              <s class="mr-5">78.000,00</s>
+              <p class="text-harga">50.000,00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/4.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Silikon Bumper Case</p>
+            <p>35.000,00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <div class="mt-5">
+        <button class="btn btn-lg btn-pink font-weight-bold text-uppercase">Lihat Semua</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Nintendo Switch Case -->
+  <div class="py-5 px-0 mx-0 produk-populer">
+    <div class="text-center mb-3">
+      <p class="text-uppercase font-weight-primary">Nintendo Switch Case ( NEW! )</p>
+    </div>
+
+    <div class="row gy-2" style="overflow-x: hidden;">
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/1.1.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Spongebob Patrick Anti Air</p>
+            <div class="d-flex justify-content-center">
+              <s class="mr-5">95.000,00</s>
+              <p class="text-harga">75.000,00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/1.2.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Mario Star Anti Air</p>
+            <div class="d-flex justify-content-center">
+              <s class="mr-5">95.000,00</s>
+              <p class="text-harga">75.000,00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/1.3.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Kartun Pinguin Biru Anti Air</p>
+            <div class="d-flex justify-content-center">
+              <s class="mr-5">95.000,00</s>
+              <p class="text-harga">75.000,00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/1.4.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Spongebob Yellow Anti Air</p>
+            <div class="d-flex justify-content-center">
+              <s class="mr-5">95.000,00</s>
+              <p class="text-harga">75.000,00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Mirror Case -->
+  <div class="py-5 px-0 mx-0 produk-populer">
+    <div class="text-center mb-3">
+      <p class="text-upercase font-weight-primary">
+        Mirror Case
+      </p>
+    </div>
+
+    <div class="row gy-2" style="overflow-x: hidden;">
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/2.1.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Spongebob Patrick Anti Air</p>
+            <p>Rp. 75.000,00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/2.2.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Mario Star Anti Air</p>
+            <p>Rp. 75.000,00</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/2.1.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Kartun Pinguin Biru Anti Air</p>
+            <p>Rp. 75.000,00</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/2.2.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Spongebob Yellow Anti Air</p>
+            <p>Rp. 75.000,00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <div class="mt-5">
+        <button class="btn btn-lg btn-pink font-weight-bold text-uppercase">Lihat Semua</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Koleksi Pilihan -->
+  <div class="py-5 px-0 mx-0 produk-populer">
+    <div class="row gy-2">
+      <div class="col-md-3">
+        <h3 class="font-weight-bold text-uppercase">Koleksi Pilihan</h3>
+        <p>Beberapa koleksi yang sudah kami pilih dan kurasi berdasarkan produk terlaris</p>
+        <a href="#" class="font-weight-bold" style="color: #000"><u>LIHAT SEMUA</u></a>
+      </div>
+
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/4.png" alt="donald-duck-case" width="220px" height="200px">
+
+            <!-- <p class="mt-3 text-capitalize">Silikon Bumper Case</p>
+            <p>35.000,00</p> -->
+            <div class="mt-3">
+              <h4>PRODUK TERBARU</h4>
+              <p>12 Produk</p>
+              <button class="btn btn-pink">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/3.1.png" alt="donald-duck-case" width="220px" height="200px">
+
+            <div class="mt-3">
+              <h4>PRODUK TERBARU</h4>
+              <p>12 Produk</p>
+              <button class="btn btn-pink">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/3.2.png" alt="donald-duck-case" width="220px" height="200px">
+
+            <div class="mt-3">
+              <h4>PRODUK TERBARU</h4>
+              <p>12 Produk</p>
+              <button class="btn btn-pink">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Koleksi Produk -->
+  <div class="py-5 produk-populer">
+    <div class="text-center pb-5">
+      <h2 class="text-uppercase font-weight-bold">KOLEKSI PRODUK</h2>
+    </div>
+    <!-- <div class="container"> -->
+      <div class="d-flex justify-content-center">
+        <p class="text-uppercase mr-5">Produk Terbaru</p>
+        <p class="text-uppercase mr-5">Produk Terlaris</p>
+        <p class="text-uppercase mr-5">IPHONE</p>
+        <p class="text-uppercase mr-5">Oppo</p>
+        <p class="text-uppercase mr-5">VIVO</p>
+        <p class="text-uppercase mr-5">SAMSUNG</p>
+        <p class="text-uppercase">REDMI</p>
+      </div>
+    <!-- </div> -->
+  </div>
+
+  <!-- Section Produk Lagi -->
+  <div class="py-5 px-0 mx-0 produk-populer">
+    <div class="row gy-2" style="overflow-x: hidden;">
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/4.1.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Mario Start Anti Air</p>
+            <p>59.000,00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/4.2.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Mario Start Anti Air</p>
+            <div class="d-flex justify-content-center">
+              <s class="mr-5">66.000,00</s>
+              <p class="text-harga">46.000,00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/4.3.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Mario Start Anti Air</p>
+            <div class="d-flex justify-content-center">
+              <s class="mr-5">78.000,00</s>
+              <p class="text-harga">50.000,00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="./assets/4.4.png" alt="donald-duck-case" width="288px">
+
+            <p class="mt-3 text-capitalize">Mario Start Anti Air</p>
+            <p>35.000,00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <div class="mt-5">
+        <button class="btn btn-lg btn-pink font-weight-bold text-uppercase">Lihat Semua</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- section 3 gambar sebelum review -->
+  <div class="py-5 px-0 produk-populer">
+    <div class="mx-5">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="./assets/1.png" alt="">
+        </div>
+        
+        <div class="col-md-4">
+          <img src="./assets/4.png" alt="">
+        </div>
+  
+        <div class="col-md-4">
+          <img src="./assets/3.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- section review -->
+  <div class="produk-populer">
+    <div class="d-flex justify-content-center py-5">
+      <div class="mr-3">
+        <svg width="38" height="41" viewBox="0 0 38 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="19" cy="20.5" rx="19" ry="20.5" fill="#D9D9D9"/>
+        </svg>
+      </div>
+  
+      <div>
+        <svg width="38" height="41" viewBox="0 0 38 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="19" cy="20.5" rx="19" ry="20.5" fill="#DC497E"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="py-4">
+      <h1 class="text-center text-uppercase">REVIEW</h1>
+      <p class="text-center">
+        Berikut adalah sedikit banyak-nya ulasan yang diberikan oleh customer kami melalui website kami secara sukarela (ini belum termasuk testimoni melalui whatsapp, LINE, instagram, email dan lainnya).
+      </p>
+    </div>
+  </div>
+
+  <!-- ulasan kami -->
+  <div class="produk-populer">
+    <div class="py-3">
+      <h3 class="text-capitalize mx-5">Ulasan Kami</h3>
+  
+      <hr />
+    </div>
+
+    <div class="mx-5 py-5">
+      <div class="mx-5 px-5">
+        <div class="d-flex">
+          <div>
+            <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+            </svg>            
+          </div>
+  
+          <div>
+            <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+            </svg>            
+          </div>
+  
+          <div>
+            <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+            </svg>            
+          </div>
+  
+          <div>
+            <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+            </svg>            
+          </div>
+  
+          <div>
+            <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+            </svg>            
+          </div>
+        </div>
+
+      </div>
+
+      <!-- review title -->
+      <div class="mx-5 px-5">
+        <h3 class="text-capitalize px-1 py-3">Super Cute!!</h3>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-2">
+          <img src="./assets/r-1.png" height="176px" width="176px" alt="">
+          <p>Dog Makeup Mirror</p>
+        </div>
+
+        <div class="col-md-8">
+          <p class="text-right">Pelayanan sangat bagus! sebelum design dicetak team Cassion mengkonfirmasi design terlebih dahulu.. mantap! Kualitas print dan cassing sih aseli bagus banget dan protective banget. thank you!</p>
+          <p class="text-right font-weight-bold">Radika</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-5 py-5">
+      <div class="mx-5 px-5">
+        <div class="d-flex">
+          <div>
+            <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+            </svg>            
+          </div>
+  
+          <div>
+            <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+            </svg>            
+          </div>
+  
+          <div>
+            <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+            </svg>            
+          </div>
+  
+          <div>
+            <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+            </svg>            
+          </div>
+  
+          <div>
+            <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+              <path d="M20 0L24.4903 12.4377H39.0211L27.2654 20.1246L31.7557 32.5623L20 24.8754L8.2443 32.5623L12.7346 20.1246L0.97887 12.4377H15.5097L20 0Z" fill="#FE9D0D"/>
+            </svg>            
+          </div>
+        </div>
+
+      </div>
+
+      <!-- review title -->
+      <div class="mx-5 px-5">
+        <h3 class="text-capitalize px-1 py-3">Case tercantik sejauh ini!!</h3>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-2">
+          <img src="./assets/2.png" height="176px" width="176px" alt="">
+          <p>Donald Duck Case</p>
+        </div>
+
+        <div class="col-md-8">
+          <p class="text-right">Udah purchase ke yang kesekian kali.. Oke banget. Hanya sayang yang pesanan kali ini telat banget karena stok casingnya lagi habis. Masih tetap mesan lagi dan lagi.</p>
+          <p class="text-right font-weight-bold">Angelia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="py-5 produk-populer">
+    <h3 class="font-weight-bold text-center">
+      Follow Us @stardaily.id
+    </h3>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

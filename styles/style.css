@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.nav-link-font {
+  font-weight: 500;
+}
+
+.hero-section {
+  background-image: url('../assets/hero.png');
+  background-size: cover;
+  height: 500px;
+}
+
+.produk-populer {
+  background-color: #D9D9D9;
+  font-size: 25px;
+}
+
+.text-harga {
+  color: #FF0000;
+}
+
+.font-weight-primary {
+  font-weight: 500;
+}
+
+.btn-pink {
+  background-color: #DC497E !important;
+  color: #fff !important;
+}
